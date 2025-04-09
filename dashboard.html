@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Kiperin Cloud | Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+
+    <!-- Premium Stil Kütüphaneleri -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PhotoSwipe CSS ve JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe-lightbox.umd.min.js"></script>
+
+    <!-- Apple Tarzı Özel Stiller -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-black: #1D1D1F;
+            --primary-white: #F5EFD9;
+            --accent-gold: #D4B254;
+            --accent-gold-light: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #64748b;
+            --text-light: #94a3b8;
+            --shadow-gold: rgba(212, 178, 84, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.1);
+            --success: #22c55e;
+            --info: #3b82f6;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue-light: #dbeafe;
+            --green-light: #dcfce7;
+            --purple-light: #f3e8ff;
+            --pink-light: #fce7f3;
+            --amber-light: #fef3c7;
+            --blue-dark: #1d4ed8;
+            --green-dark: #15803d;
+            --purple-dark: #7e22ce;
+            --pink-dark: #be185d;
+            --amber-dark: #b45309;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--primary-white);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .dark {
+            --primary-black: #F5F5F7;
+            --primary-white: #1D1D1F;
+            --accent-gold: #D4B254;
+            --accent-gold-light: #3A3520;
+            --card-bg: #2C2C2E;
+            --text-primary: #F5F5F7;
+            --text-secondary: #94a3b8;
+            --text-light: #94a3b8;
+            --shadow-gold: rgba(212, 178, 84, 0.2);
+            --shadow-dark: rgba(0, 0, 0, 0.2);
+            --blue-light: #1e3a8a;
+            --green-light: #14532d;
+            --purple-light: #581c87;
+            --pink-light: #831843;
+            --amber-light: #78350f;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 4px 15px var(--shadow-gold);
+        }
+
+        .dark .glass-card {
+            background: rgba(44, 44, 46, 0.8);
+            border: 1px solid rgba(44, 44, 46, 0.18);
+            box-shadow: 0 4px 15px var(--shadow-dark);
+        }
+
+        .hover-scale {
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Gallery styles */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            grid-gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-featured {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 120px;
+                grid-gap: 15px 0;
+            }
+
+            .gallery-item.item-wide {
+                grid-column: span 1;
+            }
+
+            .gallery-item.item-tall {
+                grid-row: span 1;
+            }
+
+            .gallery-featured {
+                grid-column: span 3;
+                grid-row: span 1;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+            .gallery-featured img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 10px var(--shadow-dark);
+            grid-column: span 1;
+        }
+
+        .gallery-item.item-wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.item-tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.95) saturate(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            opacity: 0.85;
+        }
+
+        .photo-info {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            font-size: 11px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px var(--shadow-dark);
+        }
+
+        .photo-author {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            font-size: 11px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px var(--shadow-dark);
+        }
+
+        /* Quick Access Panel */
+        .quick-access {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            border-radius: 15px;
+            box-shadow: none;
+            background: transparent;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .quick-access {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .quick-access-item:last-child {
+                grid-column: span 2;
+            }
+        }
+
+        .quick-access-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 110px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            background: var(--card-bg);
+            box-shadow: 0 4px 15px var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark .quick-access-item {
+            background: var(--card-bg);
+            box-shadow: 0 4px 20px var(--shadow-dark);
+        }
+
+        .quick-access-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px var(--shadow-dark);
+        }
+
+        .quick-access-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--info);
+            transition: all 0.3s ease;
+        }
+
+        .quick-access-item:hover .quick-access-icon {
+            transform: scale(1.1);
+        }
+
+        .quick-access-label {
+            font-size: 13px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        /* NESHA Icon Animation - Improved Version */
+        .nesha-icon {
+            position: relative;
+            overflow: visible !important;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .nesha-icon:hover {
+            transform: scale(1.03) translateY(-6px);
+        }
+
+        .nesha-icon::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #9333EA, #C026D3, #7E22CE);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nesha-icon:hover::before {
+            opacity: 1;
+        }
+
+        .nesha-icon .quick-access-icon {
+            color: #9333EA;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 0 8px rgba(147, 51, 234, 0.5));
+            transition: all 0.4s ease;
+        }
+
+        .nesha-icon:hover .quick-access-icon {
+            color: white;
+            transform: scale(1.15) translateY(-2px);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+
+        .nesha-icon .quick-access-label {
+            position: relative;
+            z-index: 2;
+            color: #9333EA;
+            font-weight: 600;
+            transition: all 0.4s ease;
+        }
+
+        .nesha-icon:hover .quick-access-label {
+            color: white;
+        }
+
+        .dark .nesha-icon .quick-access-label {
+            color: #C084FC;
+        }
+
+        .dark .nesha-icon:hover .quick-access-label {
+            color: white;
+        }
+
+        /* Fixed heights for matching sections */
+        .events-list,
+        .activities-list {
+            max-height: 280px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+            padding-right: 5px;
+        }
+
+        .events-list::-webkit-scrollbar,
+        .activities-list::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .events-list::-webkit-scrollbar-track,
+        .activities-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .events-list::-webkit-scrollbar-thumb,
+        .activities-list::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+
+        .dark .events-list::-webkit-scrollbar-thumb,
+        .dark .activities-list::-webkit-scrollbar-thumb {
+            background-color: rgba(75, 85, 99, 0.5);
+        }
+
+        /* Featured slideshow gallery */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            grid-gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-featured {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 250px;
+            }
+
+            .gallery-item.item-wide {
+                grid-column: span 1;
+            }
+
+            .gallery-item.item-tall {
+                grid-row: span 1;
+            }
+
+            .gallery-featured {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+            }
+        }
+
+        .gallery-featured {
+            grid-column: span 2;
+            grid-row: span 2;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .featured-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            object-fit: cover;
+        }
+
+        .featured-slide.active {
+            opacity: 1;
+        }
+
+        .featured-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+            transition: background 0.3s;
+        }
+
+        .featured-nav:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .featured-prev {
+            left: 15px;
+        }
+
+        .featured-next {
+            right: 15px;
+        }
+
+        .featured-info {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            z-index: 1;
+            font-size: 12px;
+            text-shadow: 0 1px 2px var(--shadow-dark);
+        }
+
+        .featured-author {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: white;
+            z-index: 1;
+            font-size: 12px;
+            text-shadow: 0 1px 2px var(--shadow-dark);
+        }
+
+        .gallery-featured::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            opacity: 0.85;
+        }
+
+        /* Weather section styles */
+        .weather-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            justify-content: space-between;
+            gap: 15px;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .weather-container::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .weather-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .weather-container::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+
+        .weather-day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 63px;
+            min-width: 63px;
+            width: 100%;
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            padding: 10px 5px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .weather-day-name {
+            font-size: 11px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .dark .weather-day-name {
+            color: var(--text-light);
+        }
+
+        .weather-icon {
+            font-size: 22px;
+            margin-bottom: 6px;
+            color: var(--info);
+        }
+
+        .weather-temp {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .weather-desc {
+            font-size: 10px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        .dark .weather-desc {
+            color: var(--text-light);
+        }
+
+        /* Greeting styles */
+        .greeting-banner {
+            color: var(--accent-gold);
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            background-color: rgba(212, 178, 84, 0.05);
+            border-radius: 10px;
+        }
+
+        .dark .greeting-banner {
+            color: var(--accent-gold);
+            background-color: rgba(212, 178, 84, 0.1);
+        }
+
+        .hashtag-container {
+            text-align: right;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .hashtag-item {
+            display: inline-block;
+        }
+
+        /* Theme Toggle Buttons */
+        .theme-options {
+            display: flex;
+            gap: 10px;
+            padding: 12px;
+            background: var(--accent-gold-light);
+            border-radius: 12px;
+        }
+
+        .dark .theme-options {
+            background: #374151;
+        }
+
+        .theme-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: var(--card-bg);
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .dark .theme-btn {
+            background: #1f2937;
+            color: var(--text-light);
+        }
+
+        .theme-btn.active {
+            background: var(--info);
+            color: white;
+        }
+
+        .dark .theme-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+
+        /* Profile dropdown animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-menu-visible {
+            display: block !important;
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 90vh;
+            display: block;
+            box-shadow: 0 0 50px var(--shadow-dark);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 110;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .modal-prev {
+            left: 20px;
+        }
+
+        .modal-next {
+            right: 20px;
+        }
+
+        .modal-photo-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 14px;
+            text-shadow: 0 1px 3px var(--shadow-dark);
+        }
+
+        .modal-photo-author {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: white;
+            font-size: 14px;
+            text-shadow: 0 1px 3px var(--shadow-dark);
+        }
+
+        /* Event Detail Button */
+        .event-details-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Event icons size adjustment */
+        .events-list .bg-blue-100,
+        .events-list .bg-green-100,
+        .events-list .bg-purple-100,
+        .events-list .bg-pink-100,
+        .events-list .bg-amber-100 {
+            padding: 0.5rem 0.8rem !important;
+        }
+
+        /* Özel CSS Override'ları */
+        .bg-white {
+            background-color: var(--card-bg) !important;
+        }
+
+        .bg-gray-50 {
+            background-color: var(--primary-white) !important;
+        }
+
+        .bg-gray-100 {
+            background-color: var(--accent-gold-light) !important;
+        }
+
+        .bg-gray-800 {
+            background-color: var(--primary-white) !important;
+        }
+
+        .text-gray-500,
+        .text-gray-400 {
+            color: var(--text-secondary) !important;
+        }
+
+        .text-gray-700 {
+            color: var(--text-primary) !important;
+        }
+
+        .dark .text-gray-400 {
+            color: var(--text-light) !important;
+        }
+
+        .dark .bg-gray-800 {
+            background-color: var(--card-bg) !important;
+        }
+
+        .dark .bg-gray-900 {
+            background-color: var(--primary-white) !important;
+        }
+
+        .dark .bg-gray-700 {
+            background-color: var(--card-bg) !important;
+        }
+
+        /* Renk sınıfları için özel renkler */
+        .bg-blue-100 {
+            background-color: var(--blue-light) !important;
+        }
+
+        .bg-green-100 {
+            background-color: var(--green-light) !important;
+        }
+
+        .bg-purple-100 {
+            background-color: var(--purple-light) !important;
+        }
+
+        .bg-pink-100 {
+            background-color: var(--pink-light) !important;
+        }
+
+        .bg-amber-100 {
+            background-color: var(--amber-light) !important;
+        }
+
+        .text-blue-600 {
+            color: var(--blue-dark) !important;
+        }
+
+        .text-green-600 {
+            color: var(--green-dark) !important;
+        }
+
+        .text-purple-600 {
+            color: var(--purple-dark) !important;
+        }
+
+        .text-pink-600 {
+            color: var(--pink-dark) !important;
+        }
+
+        .text-amber-600 {
+            color: var(--amber-dark) !important;
+        }
+
+        .text-indigo-600 {
+            color: var(--accent-gold) !important;
+        }
+
+        .dark .text-indigo-400 {
+            color: var(--accent-gold) !important;
+        }
+
+        /* Etkinlikler ve duyurular için stil değişiklikleri */
+        .announcements-list {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            max-height: 500px;
+            gap: 15px;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .announcements-list::-webkit-scrollbar {
+            width: 6px;
+            height: auto;
+        }
+
+        .announcements-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .announcements-list::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+
+        .announcements-list>li {
+            min-width: auto;
+            flex: 0 0 auto;
+            white-space: normal;
+        }
+
+        /* Yeni duyuru kartı stilleri */
+        .announcement-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 0;
+        }
+
+        .announcement-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .announcement-date {
+            background: var(--accent-gold);
+            color: white;
+            min-width: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .dark .announcement-date {
+            background: var(--accent-gold);
+        }
+
+        .announcement-date .day {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .announcement-date .month {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .announcement-content {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .announcement-details-btn {
+            cursor: pointer;
+        }
+
+        .show-on-mobile {
+            display: none;
+        }
+
+        #greetingBanner {
+            @media (max-width: 480px) {
+                display: block;
+
+                .hashtag-container {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+
+                        font-size: .8rem !important;
+                        font-weight: 300 !important;
+                    }
+                }
+
+                .greeting-text {
+                    text-align: center;
+                }
+
+                .show-on-mobile {
+                    margin-top: 10px;
+                    display: block;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-auto" src="assets/logo.png" alt="Kiperin Türkiye Logo">
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative">
+                        <div>
+                            <button id="profileDropdown" type="button"
+                                class="bg-indigo-600 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-white font-medium w-10 h-10 items-center justify-center"
+                                aria-expanded="false" aria-haspopup="true">
+                                M
+                            </button>
+                        </div>
+
+                        <div id="profileMenu"
+                            class="hidden origin-top-right absolute top-20 right-0 mt-2 w-72 rounded-xl shadow-lg py-2 bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+                            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+                                <p class="text-base font-medium text-gray-800 dark:text-white">Mert Eren KARA</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">mert.kara@kiperincollagenturkiye.com
+                                </p>
+                            </div>
+
+                            <a href="#"
+                                class="flex items-center px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                role="menuitem">
+                                <i class="fas fa-info-circle mr-3 text-indigo-500"></i>
+                                <span>Bilgi</span>
+                            </a>
+
+                            <a href="#"
+                                class="flex items-center px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                role="menuitem">
+                                <i class="fas fa-cog mr-3 text-indigo-500"></i>
+                                <span>Ayarlar</span>
+                            </a>
+
+                            <div class="px-4 py-3 border-t border-b border-gray-200 dark:border-gray-700">
+                                <p class="text-sm font-medium text-gray-800 dark:text-white mb-2">Tema</p>
+                                <div class="theme-options">
+                                    <button id="lightThemeBtn" class="theme-btn" title="Açık Tema">
+                                        <i class="fas fa-sun"></i>
+                                    </button>
+                                    <button id="darkThemeBtn" class="theme-btn" title="Karanlık Tema">
+                                        <i class="fas fa-moon"></i>
+                                    </button>
+                                    <button id="systemThemeBtn" class="theme-btn" title="Sistem Teması">
+                                        <i class="fas fa-desktop"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <a href="index.html"
+                                class="flex items-center px-4 py-3 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                role="menuitem">
+                                <i class="fas fa-sign-out-alt mr-3"></i>
+                                <span>Çıkış Yap</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Greeting Banner with Hashtags -->
+        <div class="greeting-banner flex justify-between items-center" id="greetingBanner">
+            <p class="text-lg font-medium greeting-text">
+                👋 Merhaba Kiperin <br class="show-on-mobile"> Türkiye Ailesi 🌾
+            </p>
+            <div class="hashtag-container h-8 relative">
+                <p
+                    class="hashtag-item absolute right-0 text-accent-gold text-sm font-semibold transition-all duration-500 opacity-0">
+                    #alwaysquality</p>
+                <p
+                    class="hashtag-item absolute right-0 text-accent-gold text-sm font-semibold transition-all duration-500 opacity-0">
+                    #worksmart</p>
+                <p
+                    class="hashtag-item absolute right-0 text-accent-gold text-sm font-semibold transition-all duration-500 opacity-0">
+                    #alwaystobetter</p>
+            </div>
+        </div>
+
+        <!-- Hızlı Erişim ve Hava Durumu Yan Yana -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <!-- Hızlı Erişim Kartı -->
+            <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800">
+                <h2 class="text-xl font-semibold mb-4 dark:text-white">Hızlı Erişim</h2>
+                <div class="quick-access dark:bg-gray-800">
+                    <div class="quick-access-item">
+                        <i class="fas fa-users quick-access-icon"></i>
+                        <span class="quick-access-label">Toplantı Odası</span>
+                    </div>
+                    <a href="http://uruntalep.kiperincloud.com/" target="_blank" rel="noopener noreferrer" class="quick-access-item hover:cursor-pointer">
+                        <i class="fas fa-shopping-bag quick-access-icon"></i>
+                        <span class="quick-access-label">Ürün Talep</span>
+                    </a>
+                    <div class="quick-access-item nesha-icon">
+                        <i class="fas fa-brain quick-access-icon"></i>
+                        <span class="quick-access-label">NESHA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hava Durumu Kartı -->
+            <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800">
+                <h2 class="text-xl font-semibold mb-4 dark:text-white">Hava Durumu</h2>
+                <div class="weather-container">
+                    <div class="weather-day">
+                        <span class="weather-day-name">ÇARŞAMBA</span>
+                        <i class="fas fa-cloud weather-icon text-gray-400"></i>
+                        <span class="weather-temp">11°</span>
+                        <span class="weather-desc">Bulutlu</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">PERŞEMBE</span>
+                        <i class="fas fa-cloud-rain weather-icon text-blue-600"></i>
+                        <span class="weather-temp">12°</span>
+                        <span class="weather-desc">Hafif Yağmur</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">CUMA</span>
+                        <i class="fas fa-cloud weather-icon text-gray-400"></i>
+                        <span class="weather-temp">8°</span>
+                        <span class="weather-desc">Çoğunlukla Bulutlu</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">CUMARTESİ</span>
+                        <i class="fas fa-cloud-rain weather-icon text-blue-600"></i>
+                        <span class="weather-temp">10°</span>
+                        <span class="weather-desc">Hafif Yağmur</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">PAZAR</span>
+                        <i class="fas fa-cloud-sun weather-icon text-blue-400"></i>
+                        <span class="weather-temp">12°</span>
+                        <span class="weather-desc">Parçalı Bulutlu</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">PAZARTESİ</span>
+                        <i class="fas fa-sun weather-icon text-yellow-500"></i>
+                        <span class="weather-temp">14°</span>
+                        <span class="weather-desc">Çoğunlukla Güneşli</span>
+                    </div>
+                    <div class="weather-day">
+                        <span class="weather-day-name">SALI</span>
+                        <i class="fas fa-sun weather-icon text-yellow-500"></i>
+                        <span class="weather-temp">16°</span>
+                        <span class="weather-desc">Çoğunlukla Güneşli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duyurular - Tam Genişlik -->
+        <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold dark:text-white">Duyurular</h2>
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline">Tümünü
+                    Gör</a>
+            </div>
+
+            <div class="announcements-scroll">
+                <ul class="announcements-list">
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">12</span>
+                            <span class="month">Nis</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Yıllık Değerlendirme</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Ana Toplantı Salonu, 14:00</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">Şirketin yıllık
+                                performans değerlendirme toplantısı. Tüm departman yöneticilerinin katılımı
+                                beklenmektedir.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Yıllık Değerlendirme" data-announcement-date="12 Nisan, 14:00"
+                                data-announcement-location="Ana Toplantı Salonu"
+                                data-announcement-description="Şirketin yıllık performans değerlendirme toplantısı. Tüm departman yöneticilerinin katılımı beklenmektedir. Toplantıda geçen yılın performans değerlendirmesi ve gelecek yıl hedefleri görüşülecektir. Sunum malzemelerinin önceden hazırlanması ve toplantıya katılacak kişilerin bilgilendirilmesi gerekmektedir.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">15</span>
+                            <span class="month">Nis</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Hacamat</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Sağlık Merkezi, 10:00</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">Geleneksel tedavi
+                                yöntemi hacamat seansı. Katılım için önceden rezervasyon yapılması
+                                gerekmektedir.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Hacamat" data-announcement-date="15 Nisan, 10:00"
+                                data-announcement-location="Sağlık Merkezi"
+                                data-announcement-description="Geleneksel tedavi yöntemi hacamat seansı. Katılım için önceden rezervasyon yapılması gerekmektedir. Sağlık merkezimizde düzenlenecek olan bu seans, uzman sağlık personellerimiz tarafından gerçekleştirilecektir. İşlem sonrası 2 saat dinlenme imkanı sunulacaktır.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">15</span>
+                            <span class="month">May</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Çeyrek Finansal Değerlendirme</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Konferans Salonu, 14:30</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">2024 2. çeyrek finansal değerlendirme toplantısı. Tüm departman yöneticilerinin katılımı beklenmektedir.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Çeyrek Finansal Değerlendirme" 
+                                data-announcement-date="15 Mayıs 2024, 14:30"
+                                data-announcement-location="Konferans Salonu"
+                                data-announcement-description="2024 2. çeyrek finansal değerlendirme toplantısı. Tüm departman yöneticilerinin katılımı beklenmektedir. Toplantıda ilk iki çeyrek değerlendirmesi yapılacak ve yıl sonu hedeflerinin gözden geçirilmesi sağlanacaktır. Departman yöneticilerinin bölüm raporlarını hazırlayarak toplantıya katılmaları gerekmektedir.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">20</span>
+                            <span class="month">May</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Yeni Ürün Lansmanı</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Grand Otel, İstanbul, 10:00</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">Yeni ürün serimizin lansmanı gerçekleştirilecektir. Tüm satış ve pazarlama ekibi katılım sağlamalıdır.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Yeni Ürün Lansmanı"
+                                data-announcement-date="20 Mayıs 2024, 10:00"
+                                data-announcement-location="Grand Otel, İstanbul"
+                                data-announcement-description="Kiperin'in yeni collagen serisi ürünlerinin lansmanı gerçekleştirilecektir. Tüm satış ve pazarlama ekibi katılım sağlamalıdır. Etkinlikte müşteriler, bayiler ve basın mensupları da yer alacaktır. Ürün demonstrasyonları ve tanıtım sunumları yapılacaktır. Etkinlik sonrasında öğle yemeği verilecektir. Kurumsal kimliğe uygun giyim şarttır.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">22</span>
+                            <span class="month">Nis</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Doğum Günü Partisi</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Ofis Kafeterya, 16:30</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">Nisan ayı doğumlu
+                                çalışanlarımız için toplu doğum günü kutlaması. Pasta ve ikramlar şirket
+                                tarafından karşılanacaktır.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Doğum Günü Partisi" data-announcement-date="22 Nisan, 16:30"
+                                data-announcement-location="Ofis Kafeterya"
+                                data-announcement-description="Nisan ayı doğumlu çalışanlarımız için toplu doğum günü kutlaması. Pasta ve ikramlar şirket tarafından karşılanacaktır. Tüm çalışanlarımızın katılımını bekliyoruz. Bu ay 5 çalışanımızın doğum günü kutlanacaktır.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">25</span>
+                            <span class="month">May</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Şirket Pikniği</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Belgrad Ormanı, 09:30</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">Geleneksel şirket pikniğimiz bu yıl Belgrad Ormanı'nda düzenlenecektir. Tüm çalışanlarımız ve aileleri davetlidir.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Şirket Pikniği"
+                                data-announcement-date="25 Mayıs 2024, 09:30"
+                                data-announcement-location="Belgrad Ormanı"
+                                data-announcement-description="Geleneksel şirket pikniğimiz bu yıl Belgrad Ormanı'nda düzenlenecektir. Tüm çalışanlarımız ve aileleri davetlidir. Servis araçları şirket önünden 08:30'da hareket edecektir. Piknikte çeşitli oyunlar, yarışmalar ve aktiviteler düzenlenecektir. Yemek ve içecekler şirket tarafından karşılanacaktır. Yedek kıyafet ve rahat ayakkabı getirmeniz önerilir.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="announcement-item">
+                        <div class="announcement-date">
+                            <span class="day">1</span>
+                            <span class="month">Haz</span>
+                        </div>
+                        <div class="announcement-content">
+                            <h3 class="text-lg font-semibold dark:text-white">Kariyer Günü</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Genel Merkez, 13:00</p>
+                            <p class="text-gray-700 dark:text-gray-300 line-clamp-2 mt-2">İç transfer ve terfi fırsatlarının sunulacağı Kariyer Günü etkinliği düzenlenecektir. Kariyerinde ilerleme düşünen tüm çalışanların katılımı önerilir.</p>
+                            <button
+                                class="announcement-details-btn mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline flex items-center gap-1"
+                                data-announcement-title="Kariyer Günü"
+                                data-announcement-date="1 Haziran 2024, 13:00"
+                                data-announcement-location="Genel Merkez"
+                                data-announcement-description="İç transfer ve terfi fırsatlarının sunulacağı Kariyer Günü etkinliği düzenlenecektir. Kariyerinde ilerleme düşünen tüm çalışanların katılımı önerilir. Etkinlikte departmanlar arası geçiş imkanları, açık pozisyonlar ve kariyer gelişim programları hakkında bilgilendirme yapılacaktır. İnsan Kaynakları departmanı birebir görüşmeler için randevu alınabilecektir. Katılmak isteyenlerin 28 Mayıs tarihine kadar İK portalından kayıt yaptırmaları gerekmektedir.">
+                                Detayları Görüntüle <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tavsiyeler - Tam Genişlik -->
+        <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold dark:text-white">Tavsiyeler</h2>
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline">Tümünü Gör</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Film/Dizi tavsiyesi 1 -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="Schindler's List" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-red-100 dark:bg-red-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Film
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">Schindler's List</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            II. Dünya Savaşı sırasında Alman işadamı Oskar Schindler'in, Nazi soykırımından Yahudileri kurtarmak için gösterdiği çabayı anlatan etkileyici bir dram.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">10 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Film/Dizi tavsiyesi 2 -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg" alt="The Shawshank Redemption" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-red-100 dark:bg-red-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Film
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">The Shawshank Redemption</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            Haksız yere müebbet hapis cezasına çarptırılan bir bankacının hapishane yaşamını ve umut kavramını sorgulatan film.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">12 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Film/Dizi tavsiyesi 3 -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://resizing.flixster.com/JLDbTf7whPSBeBqytrqGCMUrjUM=/fit-in/1152x864/v2/https://resizing.flixster.com/qeGRjEC1edJQu8dLViQ1BXLeZos=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vUlRUVjYyNzkzLndlYnA=" alt="Breaking Bad" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-red-100 dark:bg-red-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Dizi
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">Breaking Bad</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            Kanser teşhisi konan bir kimya öğretmeninin, ailesinin geleceğini güvence altına almak için uyuşturucu üretimine başlamasıyla değişen hayatını anlatan dizi.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">15 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitap tavsiyesi 1 -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:1459987/wh:true/miw:200/mih:200" alt="Sapiens" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-blue-100 dark:bg-blue-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Kitap
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">Sapiens: İnsan Türünün Kısa Bir Tarihi</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            Yuval Noah Harari'nin bu çok satan kitabı, insanlık tarihini biyolojik, antropolojik ve ekonomik perspektiflerden ele alıyor.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">18 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitap tavsiyesi 2 -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:11447395/wh:true/miw:200/mih:200" alt="Hayvan Çiftliği" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-blue-100 dark:bg-blue-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Kitap
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">Hayvan Çiftliği</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            George Orwell'in bu alegorik romanı, bir çiftlikteki hayvanların insanlara karşı ayaklanması üzerinden totaliter rejimleri eleştiriyor.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">20 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Makale/Blog tavsiyesi -->
+                <div class="recommendation-item bg-white dark:bg-gray-700 rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+                    <div class="recommendation-img-container h-40 overflow-hidden">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/0*zTf0qukqHZRzPkbV" alt="Medium Article" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <div class="flex items-start gap-3 mb-2">
+                            <div class="bg-green-100 dark:bg-green-900 py-1 px-3 rounded-md text-xs font-medium text-black dark:text-white">
+                                Makale
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold dark:text-white">Yapay Zeka ve İş Geleceği</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3 mt-2">
+                            Medium'da yayınlanan bu kapsamlı makale, yapay zekanın iş dünyasına etkilerini ve gelecekteki kariyer seçimlerini nasıl şekillendireceğini ele alıyor.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 px-4 py-3 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">25 Nisan, 2024</span>
+                            <a href="#" class="text-indigo-600 dark:text-indigo-400 text-xs font-medium hover:underline">Devamını oku</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fotoğraflar - Tam Genişlik -->
+        <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold dark:text-white">Fotoğraflar</h2>
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 text-sm font-medium hover:underline">Tümünü Gör</a>
+            </div>
+
+            <div class="gallery-container" id="landscape-gallery">
+                <div class="gallery-featured">
+                    <div class="featured-slideshow">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop"
+                            alt="Dağ Manzarası" class="featured-slide active" data-info="50mm - F2.8 - ISO 400"
+                            data-author="By MEK">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=800&fit=crop"
+                            alt="Sis Manzarası" class="featured-slide" data-info="24mm - F3.5 - ISO 800"
+                            data-author="By MEK">
+                        <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&h=800&fit=crop"
+                            alt="Çiçekli Vadi" class="featured-slide" data-info="16mm - F8.0 - ISO 200"
+                            data-author="By MEK">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200&h=800&fit=crop"
+                            alt="Göl Manzarası" class="featured-slide" data-info="24mm - F11 - ISO 400"
+                            data-author="By MEK">
+                    </div>
+                    <div class="featured-nav featured-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="featured-nav featured-next"><i class="fas fa-chevron-right"></i></div>
+                    <div class="featured-info">50mm - F2.8 - ISO 400</div>
+                    <div class="featured-author">By MEK</div>
+                </div>
+
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e"
+                    data-info="35mm - F4.0 - ISO 200" data-author="By MEK">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=400&fit=crop"
+                        alt="Göl Manzarası">
+                    <div class="photo-info">35mm - F4.0 - ISO 200</div>
+                    <div class="photo-author">By MEK</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                    data-info="70mm - F5.6 - ISO 100" data-author="By MEK">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop"
+                        alt="Deniz Manzarası">
+                    <div class="photo-info">70mm - F5.6 - ISO 100</div>
+                    <div class="photo-author">By MEK</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1552083375-1447ce886485"
+                    data-info="85mm - F2.0 - ISO 320" data-author="By MEK">
+                    <img src="https://images.unsplash.com/photo-1552083375-1447ce886485?w=600&h=400&fit=crop"
+                        alt="Karlı Dağlar">
+                    <div class="photo-info">85mm - F2.0 - ISO 320</div>
+                    <div class="photo-author">By MEK</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1454982523318-4b6396f39d3a"
+                    data-info="105mm - F4.0 - ISO 100" data-author="By MEK">
+                    <img src="https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?w=600&h=400&fit=crop"
+                        alt="Dağ Silüeti">
+                    <div class="photo-info">105mm - F4.0 - ISO 100</div>
+                    <div class="photo-author">By MEK</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aktiviteler - Tam Genişlik -->
+        <div class="glass-card rounded-xl shadow-sm p-6 dark:bg-gray-800">
+            <h2 class="text-xl font-semibold mb-4 dark:text-white">Aktiviteler</h2>
+            <div class="space-y-4 activities-list">
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-indigo-600 dark:text-indigo-300 font-medium">A</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Ahmet Yılmaz</span> yeni
+                            bir dokuman ekledi.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">10 dakika önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-red-600 dark:text-red-300 font-medium">F</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Fatma Demir</span> bir
+                            toplantı planladı.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">2 saat önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-green-600 dark:text-green-300 font-medium">M</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Mehmet Kaya</span> bir
+                            görev tamamladı.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Dün</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-yellow-600 dark:text-yellow-300 font-medium">S</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Selim Öztürk</span> yeni
+                            bir ürün siparişi verdi.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Dün</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-blue-600 dark:text-blue-300 font-medium">Z</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Zeynep Aydın</span> bir
+                            öneri sundu.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">2 gün önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-purple-600 dark:text-purple-300 font-medium">E</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Elif Yıldız</span> dosya
+                            paylaştı.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">3 gün önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-pink-100 dark:bg-pink-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-pink-600 dark:text-pink-300 font-medium">B</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Burak Demir</span> proje
+                            sunumunu güncelledi.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">3 gün önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-orange-600 dark:text-orange-300 font-medium">D</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Deniz Korkmaz</span> yeni
+                            bir öneri oluşturdu.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">4 gün önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-teal-600 dark:text-teal-300 font-medium">C</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Can Yılmaz</span> bir
+                            etkinlik planladı.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">5 gün önce</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="w-10 h-10 bg-lime-100 dark:bg-lime-900 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-lime-600 dark:text-lime-300 font-medium">G</span>
+                    </div>
+                    <div>
+                        <p class="text-sm dark:text-white"><span class="font-medium">Gül Çelik</span> satış
+                            raporlarını güncelledi.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">1 hafta önce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom Modal -->
+    <div id="photoModal" class="modal">
+        <div class="close-modal" id="closeModal">&times;</div>
+        <div class="modal-nav modal-prev" id="prevPhoto"><i class="fas fa-chevron-left"></i></div>
+        <div class="modal-nav modal-next" id="nextPhoto"><i class="fas fa-chevron-right"></i></div>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Büyük Fotoğraf">
+            <div id="modalPhotoInfo" class="modal-photo-info"></div>
+            <div id="modalPhotoAuthor" class="modal-photo-author"></div>
+        </div>
+    </div>
+
+    <!-- Event Details Modal -->
+    <div id="eventModal" class="modal">
+        <div class="close-modal" id="closeEventModal">&times;</div>
+        <div class="modal-content bg-white dark:bg-gray-800 rounded-xl p-6 max-w-md w-full">
+            <h2 id="eventTitle" class="text-2xl font-semibold mb-4 dark:text-white"></h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="bg-indigo-100 dark:bg-indigo-900 p-2 rounded-lg">
+                        <i class="fas fa-calendar text-indigo-600 dark:text-indigo-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Tarih & Saat</p>
+                        <p id="eventDate" class="font-medium dark:text-white"></p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="bg-indigo-100 dark:bg-indigo-900 p-2 rounded-lg">
+                        <i class="fas fa-map-marker-alt text-indigo-600 dark:text-indigo-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Konum</p>
+                        <p id="eventLocation" class="font-medium dark:text-white"></p>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Açıklama</p>
+                    <p id="eventDescription" class="dark:text-white text-sm"></p>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+                <button id="closeEventBtn"
+                    class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                    Kapat
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Announcement Details Modal -->
+    <div id="announcementModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-40 dark:bg-opacity-60 backdrop-blur-sm"></div>
+        <div
+            class="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl">
+            <button id="closeAnnouncementModal"
+                class="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div
+                    class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900 mb-3">
+                    <i class="fas fa-bullhorn text-indigo-600 dark:text-indigo-400 text-xl"></i>
+                </div>
+                <h3 id="announcementTitle" class="text-xl font-semibold dark:text-white"></h3>
+                <div class="flex items-center justify-center mt-2 gap-3">
+                    <p id="announcementDate" class="text-sm text-gray-600 dark:text-gray-400"></p>
+                    <span>•</span>
+                    <p id="announcementLocation" class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                <p id="announcementDescription" class="text-gray-700 dark:text-gray-300 leading-relaxed"></p>
+            </div>
+            <div class="mt-6 text-center">
+                <button id="modalCloseButton"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 font-medium rounded-lg transition-colors hover:bg-indigo-200 dark:hover:bg-indigo-800">
+                    Kapat
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/title.js"></script>
+    <script>
+        // Theme Functions
+        const lightThemeBtn = document.getElementById('lightThemeBtn');
+        const darkThemeBtn = document.getElementById('darkThemeBtn');
+        const systemThemeBtn = document.getElementById('systemThemeBtn');
+
+        // Hashtag animation
+        function initHashtagRotation() {
+            const hashtags = document.querySelectorAll('.hashtag-item');
+            let currentIndex = 0;
+
+            function showNextHashtag() {
+                // Hide all hashtags
+                hashtags.forEach(tag => {
+                    tag.style.opacity = '0';
+                    tag.style.transform = 'translateY(20px)';
+                });
+
+                // Show current hashtag
+                hashtags[currentIndex].style.opacity = '1';
+                hashtags[currentIndex].style.transform = 'translateY(0)';
+
+                // Increment index for next time
+                currentIndex = (currentIndex + 1) % hashtags.length;
+            }
+
+            // Initial setup - position all hashtags at the same spot
+            hashtags.forEach(tag => {
+                tag.style.transform = 'translateY(20px)';
+            });
+
+            // Show first hashtag immediately
+            showNextHashtag();
+
+            // Set interval for rotation
+            setInterval(showNextHashtag, 3000);
+        }
+
+        // Initialize hashtag rotation when document is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            initHashtagRotation();
+        });
+
+        function setTheme(theme) {
+            // Remove active class from all buttons
+            lightThemeBtn.classList.remove('active');
+            darkThemeBtn.classList.remove('active');
+            systemThemeBtn.classList.remove('active');
+
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                lightThemeBtn.classList.add('active');
+            } else if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                darkThemeBtn.classList.add('active');
+            } else {
+                // System theme
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                localStorage.removeItem('theme');
+                systemThemeBtn.classList.add('active');
+            }
+        }
+
+        // Initial theme check
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            setTheme('light');
+        } else if (savedTheme === 'dark') {
+            setTheme('dark');
+        } else {
+            setTheme('system');
+        }
+
+        // Theme toggle buttons
+        lightThemeBtn.addEventListener('click', () => {
+            setTheme('light');
+        });
+
+        darkThemeBtn.addEventListener('click', () => {
+            setTheme('dark');
+        });
+
+        systemThemeBtn.addEventListener('click', () => {
+            setTheme('system');
+        });
+
+        // Profile dropdown - improved
+        const profileDropdown = document.getElementById('profileDropdown');
+        const profileMenu = document.getElementById('profileMenu');
+
+        profileDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+            profileMenu.classList.toggle('hidden');
+            profileMenu.classList.toggle('profile-menu-visible');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!profileDropdown.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.classList.add('hidden');
+                profileMenu.classList.remove('profile-menu-visible');
+            }
+        });
+
+        // Photo Gallery Modal
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('photoModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalPhotoInfo = document.getElementById('modalPhotoInfo');
+        const modalPhotoAuthor = document.getElementById('modalPhotoAuthor');
+        const closeModal = document.getElementById('closeModal');
+        const prevPhoto = document.getElementById('prevPhoto');
+        const nextPhoto = document.getElementById('nextPhoto');
+
+        let currentIndex = 0;
+
+        // Open modal when clicking on a gallery item
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openModal(item);
+            });
+        });
+
+        // Open modal with specified item
+        function openModal(item) {
+            const imageSrc = item.getAttribute('data-src');
+            const imageInfo = item.getAttribute('data-info');
+            const imageAuthor = item.getAttribute('data-author');
+
+            modalImage.src = imageSrc;
+            modalPhotoInfo.textContent = imageInfo;
+            modalPhotoAuthor.textContent = imageAuthor;
+
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Navigate to previous photo
+        prevPhoto.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            openModal(galleryItems[currentIndex]);
+        });
+
+        // Navigate to next photo
+        nextPhoto.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            openModal(galleryItems[currentIndex]);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('show')) return;
+
+            if (e.key === 'Escape') {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                openModal(galleryItems[currentIndex]);
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                openModal(galleryItems[currentIndex]);
+            }
+        });
+
+        // Event Details Modal
+        const eventModal = document.getElementById('eventModal');
+        const closeEventModal = document.getElementById('closeEventModal');
+        const closeEventBtn = document.getElementById('closeEventBtn');
+        const eventTitle = document.getElementById('eventTitle');
+        const eventDate = document.getElementById('eventDate');
+        const eventLocation = document.getElementById('eventLocation');
+        const eventDescription = document.getElementById('eventDescription');
+        const detailButtons = document.querySelectorAll('.event-details-btn');
+
+        // Open event modal when clicking on a detail button
+        detailButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.getAttribute('data-event-title');
+                const date = button.getAttribute('data-event-date');
+                const location = button.getAttribute('data-event-location');
+                const description = button.getAttribute('data-event-description');
+
+                eventTitle.textContent = title;
+                eventDate.textContent = date;
+                eventLocation.textContent = location;
+                eventDescription.textContent = description;
+
+                eventModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close event modal
+        closeEventModal.addEventListener('click', () => {
+            eventModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        closeEventBtn.addEventListener('click', () => {
+            eventModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside the content
+        eventModal.addEventListener('click', (e) => {
+            if (e.target === eventModal) {
+                eventModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Featured slideshow functionality
+        const featuredSlides = document.querySelectorAll('.featured-slide');
+        const featuredPrev = document.querySelector('.featured-prev');
+        const featuredNext = document.querySelector('.featured-next');
+        const featuredInfo = document.querySelector('.featured-info');
+        const featuredAuthor = document.querySelector('.featured-author');
+        let currentFeaturedIndex = 0;
+
+        function showFeaturedSlide(index) {
+            // Hide all slides
+            featuredSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Normalize index
+            if (index < 0) index = featuredSlides.length - 1;
+            if (index >= featuredSlides.length) index = 0;
+
+            // Show and update current slide
+            currentFeaturedIndex = index;
+            featuredSlides[currentFeaturedIndex].classList.add('active');
+
+            // Update info
+            featuredInfo.textContent = featuredSlides[currentFeaturedIndex].getAttribute('data-info');
+            featuredAuthor.textContent = featuredSlides[currentFeaturedIndex].getAttribute('data-author');
+        }
+
+        featuredPrev.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event from bubbling up
+            showFeaturedSlide(currentFeaturedIndex - 1);
+        });
+
+        featuredNext.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event from bubbling up
+            showFeaturedSlide(currentFeaturedIndex + 1);
+        });
+
+        // Auto rotate slides every 5 seconds
+        setInterval(() => {
+            showFeaturedSlide(currentFeaturedIndex + 1);
+        }, 5000);
+
+        // Make featured slideshow clickable
+        document.querySelector('.gallery-featured').addEventListener('click', (e) => {
+            // Don't open modal if clicking on navigation buttons
+            if (e.target.closest('.featured-nav')) {
+                return;
+            }
+
+            const activeSlide = document.querySelector('.featured-slide.active');
+            const imageSrc = activeSlide.getAttribute('src');
+            const imageInfo = activeSlide.getAttribute('data-info');
+            const imageAuthor = activeSlide.getAttribute('data-author');
+
+            modalImage.src = imageSrc;
+            modalPhotoInfo.textContent = imageInfo;
+            modalPhotoAuthor.textContent = imageAuthor;
+
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Announcement Details Modal
+        const announcementModal = document.getElementById('announcementModal');
+        const closeAnnouncementModal = document.getElementById('closeAnnouncementModal');
+        const modalCloseButton = document.getElementById('modalCloseButton');
+        const announcementTitle = document.getElementById('announcementTitle');
+        const announcementDate = document.getElementById('announcementDate');
+        const announcementLocation = document.getElementById('announcementLocation');
+        const announcementDescription = document.getElementById('announcementDescription');
+        const detailsAnnouncementButtons = document.querySelectorAll('.announcement-details-btn');
+
+        // Open announcement modal when clicking on a detail button
+        detailsAnnouncementButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.getAttribute('data-announcement-title');
+                const date = button.getAttribute('data-announcement-date');
+                const location = button.getAttribute('data-announcement-location');
+                const description = button.getAttribute('data-announcement-description');
+
+                announcementTitle.textContent = title;
+                announcementDate.textContent = date;
+                announcementLocation.textContent = location;
+                announcementDescription.textContent = description;
+
+                announcementModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Sayfanın kaydırılmasını engelle
+            });
+        });
+
+        // Close announcement modal
+        closeAnnouncementModal.addEventListener('click', () => {
+            announcementModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Sayfanın kaydırılmasına izin ver
+        });
+
+        modalCloseButton.addEventListener('click', () => {
+            announcementModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Sayfanın kaydırılmasına izin ver
+        });
+
+        // Close modal when clicking outside the content
+        announcementModal.addEventListener('click', (e) => {
+            if (e.target === announcementModal || e.target.classList.contains('backdrop-blur-sm')) {
+                announcementModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Sayfanın kaydırılmasına izin ver
+            }
+        });
+    </script>
+</body>
+
+</html>
