@@ -990,6 +990,16 @@
             }
         }
     </style>
+
+    <!-- Authentication Check -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginStatus = localStorage.getItem('login_status');
+            if (loginStatus !== 'true') {
+                window.location.href = '/';
+            }
+        });
+    </script>
 </head>
 
 <body class="min-h-screen bg-gray-50 dark:bg-gray-900 font-sans">
@@ -1050,7 +1060,7 @@
                                 </div>
                             </div>
 
-                            <a href="index.html"
+                            <a href="index.html" onclick="localStorage.setItem('login_status', 'false'); return true;"
                                 class="flex items-center px-4 py-3 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                                 role="menuitem">
                                 <i class="fas fa-sign-out-alt mr-3"></i>

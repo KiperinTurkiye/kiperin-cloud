@@ -199,6 +199,9 @@
                     loginBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Başarılı';
                     loginBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
                     
+                    // Set login status in localStorage
+                    localStorage.setItem('login_status', 'true');
+                    
                     // dashboard.html'e yönlendir
                     setTimeout(() => {
                         window.location.href = 'dashboard';
