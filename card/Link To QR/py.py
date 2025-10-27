@@ -19,9 +19,9 @@ if __name__ == "__main__":
     
     # Personel listesi
     personel = [
-        ("busrakoz", "Büşra Köz"),
         ("batuhanpektas", "Batuhan Pektaş"),
-        ("cemranur", "Cemranur Erdal"),
+        ("busrakoz", "Büşra Köz"),
+        ("cemrenurerdal", "Cemranur Erdal"),
         ("hasansamuk", "Hasan Samuk"),
         ("tolgapektas", "Tolga Pektaş")
     ]

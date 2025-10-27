@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cemranur ERDAL- Kiperin Türkiye</title>
     <meta name="description" content="Automatically downloads the English card image on visit.">
+    <link rel="preload" href="../../assets/en/cemrenur-erdal.png" as="image">
     <link rel="preload" href="../../styles.css" as="style">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" href="../../assets/icon.png">
@@ -14,7 +15,7 @@
 
     <main class="container">
       <figure class="card-wrapper" aria-label="Card image">
-        <img id="cardImage" src="../../assets/en/cemrenur-erdal.png" data-download="cemrenur-erdal.png" alt="Business Card" loading="eager" decoding="sync">
+        <img id="cardImage" src="../../assets/en/cemrenur-erdal.png" data-download="cemrenur-erdal.png" alt="Business Card" loading="eager" decoding="sync" fetchpriority="high">
         <figcaption class="site">
           <a href="https://kiperinturkiye.com" target="_blank" rel="noopener">kiperinturkiye.com</a>
         </figcaption>
