@@ -2,7 +2,7 @@ function triggerDownload(url, filename){
   try{
     const a=document.createElement('a');
     a.href=url;
-    a.download=filename||url.split('/').pop()||'card.jpg';
+    a.download=filename||url.split('/').pop()||'card.png';
     a.rel='noopener';
     a.style.display='none';
     document.body.appendChild(a);
@@ -19,7 +19,8 @@ function autoDownload(){
   const img=document.getElementById('cardImage');
   if(!img)return;
   const url=img.getAttribute('src');
-  triggerDownload(url,'tolga-pektas-card.png');
+  const filename=img.getAttribute('data-download')||url.split('/').pop()||'card.png';
+  triggerDownload(url,filename);
 }
 
 window.addEventListener('DOMContentLoaded',()=>{
@@ -27,7 +28,10 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(btn){
     btn.addEventListener('click',()=>{
       const img=document.getElementById('cardImage');
-      if(img) triggerDownload(img.src,'tolga-pektas-card.png');
+      if(img){
+        const filename=img.getAttribute('data-download')||img.src.split('/').pop()||'card.png';
+        triggerDownload(img.src,filename);
+      }
     });
   }
 
