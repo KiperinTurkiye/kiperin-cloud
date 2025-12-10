@@ -2,348 +2,555 @@
 <products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <product>
-        <sku>KC00001</sku>
-        <name>Kiperin Collagen %100 Saf ve Doğal, Çift Hidrolize Toz Kolajen içeren Diyet Takviyesi
-            (50 Günlük)</name>
-        <url>https://kiperinturkiye.com/products/kiperin-classic-collagen</url>
-        <imgUrl>
-            https://kiperinturkiye.com/cdn/shop/files/site-kolajen-1_0ecfbf07-bf95-4568-9484-a05df18f72a3.jpg</imgUrl>
+        <sku>KV00001</sku>
+        <name>Kiperin Vision | Göz &amp; Net Görüş | Çinko, Selenyum, Astaksantin, Lutein, Safran.. | 30 Günlük</name>
+        <url>https://kiperinturkiye.com/products/kiperin-vision</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/vision.jpg?v=1765286896</imgUrl>
         <additionalimages>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-2_d2902971-5bd7-49d5-b477-2a998e410029.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-3_25d64bf2-766f-4a8c-9855-650ce0296718.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-4_cb51fabb-2b1f-4aa9-8bea-2580a97858bd.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-5_8db9aa86-1bc0-4c2d-b5be-969e7db402ba.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-6_c8a544e7-0854-4a88-a7f0-e335fe0b012e.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-7_53ce0555-8ffd-4a25-84b2-1e6c27e92399.jpg</imgUrl>
-            <imgUrl>
-                https://kiperinturkiye.com/cdn/shop/files/site-kolajen-8_a3805202-0ea7-46b0-8cb7-b545b65d5a9a.jpg</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-vision-2.jpg?v=1765286896</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-vision-3.jpg?v=1765286896</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-vision-4.jpg?v=1765286896</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-vision-5.jpg?v=1765286896</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_918dde1e-a047-4c63-b941-9b19821ffcbf.jpg?v=1765286896</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Classic Collagen, %100 Saf ve Doğal çift hidrolize edilmiş kolajen peptitleri içeren özel bir gıda takviyesidir. Kolajen, vücudun bağ dokularında doğal olarak bulunan temel bir proteindir. İçeriğindeki kolajen peptitleri, cildin normal fonksiyonlarının korunmasına katkıda bulunur. Ayrıca saç, tırnak, kıkırdak, kemik ve bağ dokularının yapısında bulunan kolajen proteinini desteklemeye yardımcı olur. Düzenli kullanımda, cilt ve bağ dokularının normal yapısının korunmasına destek olur. Güçlü ve saf içeriğiyle günlük yaşamda kolajen desteği arayanlar için ideal bir takviyedir.]]></description>
         <distributor>true</distributor>
-        <price>1859.00</price>
-        <shipPrice>1036.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>489.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Kolajen</productCategory>
-        <barcode>8682304243509</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174067</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KPC00001</sku>
-        <name>%100 Saf ve Doğal Mor Çoklu Kolajen Peptitleri içeren Lipozomal Teknoloji Diyet Takviyesi (576gr)</name>
-        <url>https://kiperinturkiye.com/products/kiperin-purple-collagen</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-1_c6e2f122-2ce0-4cf7-978d-f059139ae2a4.jpg?v=1758201538</imgUrl>
+        <sku>KGR00001</sku>
+        <name>Kiperin Green | Detoks | Spirulina, Yeşil Çay, Brokoli Ekstresi, Prebiyotik (İnülin) | 30 Günlük</name>
+        <url>https://kiperinturkiye.com/products/kiperin-green-detoks</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/green.jpg?v=1765344755</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-2_2d2c41d1-5daa-4158-9cb9-a1886e3998e0.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-3_203ba003-d485-4698-b8e8-ff55bdef140a.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-4_709a87c3-fd9a-4614-8d78-1e050ce2980e.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-5_86cff57d-ea9d-425b-9ede-a700cfacc61b.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-6_f6d6f82f-649f-4be4-a581-7f6bfa13595b.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-7_12dab040-27bd-464f-8472-5703146d17dd.jpg?v=1758201538</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Mor-kolajen-site-8_6aa66f9d-0f48-4f74-ac4d-b13be07d47d2.jpg?v=1758201538</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-green-2.jpg?v=1765344755</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-green-3.jpg?v=1765344755</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-green-4.jpg?v=1765344755</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-green-5.jpg?v=1765344755</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-green-6.jpg?v=1765344755</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Lipozomal teknoloji ile üretilen Mor Kolajen, kolajen peptitleri ile birlikte İnülin Lifi, Sambucus Ekstraktı, Magnezyum Sitrat, Magnezyum Malat, Yumurta Zarı, C Vitamini, Hyaluronik Asit, Çörek Otu Ekstraktı, Bromelain, Yaban Mersini Özü ve 18 amino asit içeren özel bir gıda takviyesidir. İçeriğinde bulunan kolajen peptitleri, cilt, saç, tırnak, eklem ve bağ dokularının yapısında doğal olarak bulunan kolajenin desteklenmesine yardımcı olur. C vitamini, bağışıklık sisteminin normal fonksiyonuna katkıda bulunur. Magnezyum ise normal kas fonksiyonuna ve yorgunluk ile bitkinliğin azalmasına destek olur. Mor Kolajen, sahip olduğu lipozomal teknoloji sayesinde içeriklerin biyoyararlanımının artmasına katkı sağlar. Çift hidrolize kolajen peptitleri, daha küçük parçalara ayrılmış formuyla kolay emilime destek olur.]]></description>
         <distributor>true</distributor>
-        <price>2359.00</price>
-        <shipPrice>1479.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>1319.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Kolajen</productCategory>
-        <barcode>8682304243516</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174029</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KMM00001</sku>
-        <name>5x Çoklu Magnezyum (Taurat, Bisglisinat, Malat, Sitrat, L-Treonat) 60Kapsül | Akıllı Gıda Takviyesi</name>
-        <url>https://kiperinturkiye.com/products/kiperin-magnezyum-takviyesi</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/mag-hb.jpg</imgUrl>
+        <sku>KCOC00001</sku>
+        <name>Kiperin Coffee Collagen | Kahveli Çift Hidrolize %100 Saf ve Doğal Toz Kolajen Peptitler | 30 Günlük</name>
+        <url>https://kiperinturkiye.com/products/kiperin-coffee-collagen</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/coffee.jpg?v=1765344789</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum2.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/magnezyum-3-hb.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum4.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum5.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum6.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum7.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Magnezyum8.jpg</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-coffee-2.jpg?v=1765344789</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-coffee-3.jpg?v=1765344789</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-coffee-4.jpg?v=1765344789</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-coffee-5.jpg?v=1765344789</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin 5x Multi Magnezyum, vücutta farklı görevleri desteklemeye yardımcı olmak üzere 5 farklı magnezyum formunu (Sitrat, Malat, Bisglisinat, Taurat ve L-Treonat) bir araya getiren özel bir Akıllı Gıda Takviyesidir. Magnezyum, kas fonksiyonlarının, sinir sisteminin ve enerji oluşum metabolizmasının normal işleyişine katkıda bulunur. Ayrıca yorgunluk ve bitkinliğin azalmasına yardımcı olur. Farklı türdeki magnezyum formlarının sinerjik birleşimi sayesinde, vücuda yüksek biyoyararlanım sunar. Günlük yaşam temposunda, spor yapanlar ve dengeli beslenmeye önem verenler için pratik bir destek sağlar.]]></description>
         <distributor>true</distributor>
-        <price>729.00</price>
-        <shipPrice>589.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>1369.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8682304243561</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Kolajen</productCategory>
+        <barcode>8685035174074</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KMV00001</sku>
-        <name>Lipozomal Multivitamin 13 Vitamin 6 Mineral Cilt - Saç - Tırnak Enerji | Akıllı Gıda Takviyesi</name>
-        <url>https://kiperinturkiye.com/products/kiperin-multivitamin-takviyesi</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-1.jpg?v=1758631212</imgUrl>
+        <sku>KG00001</sku>
+        <name>Kiperin Goldra | Cilt, Saç &amp; Tırnak | Biotin, Keratin, Üzüm Çekirdeği, Hyaluronik Asit.. | 30 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-goldra</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/goldra.jpg?v=1765344921</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-2.jpg?v=1758631212</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-3.jpg?v=1758631212</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-4.jpg?v=1758631212</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-5.jpg?v=1758631212</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-6.jpg?v=1758631212</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Multivitamin-7.jpg?v=1758631212</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-goldra-2.png?v=1765344921</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-goldra-3.jpg?v=1765344921</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-goldra-4.jpg?v=1765344921</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-goldra-5_fd38d9f2-a505-435f-b460-5428f2149f3e.jpg?v=1765344921</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-goldra-6.png?v=1765344921</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Lipozomal Multivitamin; C, E, B3, K, B5, D3, B12, B1, B2, B6, A, Folik Asit, Krom, Biyotin, Molibden, Selenyum, Manganez ve İyot içeren özel kombinasyonuyla günlük vitamin ve mineral desteği sunan bir Akıllı Gıda Takviyesidir. Günlük beslenmeye ek olarak kullanıldığında, bağışıklık sisteminin normal fonksiyonuna, enerji oluşum metabolizmasına, cilt ve saçın korunmasına ve yorgunluk ile bitkinliğin azalmasına katkıda bulunur. Kiperin Lipozomal Multivitamin’in içerdiği vitamin ve mineraller, normal enerji seviyelerinin korunmasına, hücrelerin yenilenmesine ve metabolizmanın sağlıklı çalışmasına destek olur. Yoğun tempoda zinde ve dengeli hissetmek isteyenler için pratik bir çözümdür. Tek kapsülde temel vitamin ve mineralleri bir arada sunar.]]></description>
         <distributor>true</distributor>
-        <price>849.00</price>
-        <shipPrice>689.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>689.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8682304243530</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174050</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KCCD00001</sku>
+        <name>%100 Saf ve Doğal Yüksek Biyoaktif Çift Hidrolize Kolajen Peptitler içeren Diyet Takviyesi (300gr)</name>
+        <url>https://kiperinturkiye.com/products/100-saf-ve-dogal-yuksek-biyoaktif-cift-hidrolize-kolajen-peptitler-iceren-diyet-takviyesi-300gr</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/doypack-guncel.jpg?v=1765344588</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/faydalar_hb.png?v=1765344588</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb4.png?v=1765344588</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb3.jpg?v=1765344588</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/life_style_hb.png?v=1765344588</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb5.png?v=1765344588</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>789.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Kolajen</productCategory>
+        <barcode>8685035174036</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>CCM00001</sku>
+        <name>Yüzde Eriyen Kolajen Maskesi | Kolajen - Hyaluronik Asit - Probiyotik | Canlandırıcı | 5 ADET</name>
+        <url>https://kiperinturkiye.com/products/yuzde-eriyen-kolajen-maskesi-kolajen-hyaluronik-asit-probiyotik-canlandirici-5-adet</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/serum.jpg?v=1765344951</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/2_e836703a-295b-4846-a375-cc2264e50025.jpg?v=1765344951</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/3_47edec77-ba89-4cb7-bce2-fc701f66e5b9.jpg?v=1765344951</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/4_1387ece5-2231-43f2-ace5-fc415a48cc99.jpg?v=1765344951</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/5_8bf48272-a89c-4cf6-b12c-7d8130da4993.jpg?v=1765344951</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>599.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Kolajen</productCategory>
+        <barcode>8684898446649</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KEI00001</sku>
+        <name>Kiperin Eigrela | Kuersetin, Kekik, Astragalus, Çörek Otu, Akgünlük.. | 60 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-eigrela-akgunluk-gojiberi-cin-geveni-boswellia-ekstresi-kuersetin-60-kapsul-1</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/eigrela-hb_a0017bdb-7c00-4c4b-96f2-e897283cc020.jpg?v=1765344982</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-eigrela-3.jpg?v=1765344982</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-eigrela-2.jpg?v=1765344982</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-eigrela-5.jpg?v=1765344982</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-eigrela-6.jpg?v=1765344982</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>1029.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174012</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KSM00001</sku>
+        <name>Kiperin Shenmush | Mushroom Complex | AHCC, Reishi, Shiitake, Lions&apos;s Mane, Agaricus.. | 30 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-eigrela-akgunluk-gojiberi-cin-geveni-boswellia-ekstresi-kuersetin-60-kapsul</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/shenmush-hb_85a15235-2529-431d-a970-3c88d9defdc0.jpg?v=1765345020</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-shenmush-3.jpg?v=1765345020</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-shenmush-2.jpg?v=1765345020</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-shenmush-5.jpg?v=1765345020</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-shenmush-6.jpg?v=1765345020</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>1499.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174043</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KB00001</sku>
+        <name>Kiperin Burn | L-Karnitin, Yeşil Çay, Guarana, Zencefil, Garsiniya, Kafein.. | 60 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-burn-yag-yakici-takviye</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Burn-hb_7b2f8c5e-4f28-432f-8a40-6cbd779fe879.jpg?v=1765345048</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-burn-3_4604bf9e-890d-4ead-b0c7-745be6f6cafb.jpg?v=1765345048</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-burn-2_297760c2-5098-4683-883f-63902c7ad5e5.jpg?v=1765345048</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-burn-6_97c98a5d-e568-4fe0-abe7-c92cc908a2a6.jpg?v=1765345048</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-burn-7_d8141b7a-48ff-454e-ab90-8cc3a0545caf.jpg?v=1765345048</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>1159.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446687</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KF00001</sku>
+        <name>Kiperin Flexura | Glukozamin, MSM, Kondroitin, Akgünlük, SAM-e, Hyaluronik Asit.. | 60 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-flexura-eklem-glukozamin-msm-kondroitin-akgunluk-sam-e-hyaluronik-asit-60-kapsul</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/flexura-hb_d90e0989-838a-4000-82a1-55511b445b2e.jpg?v=1765345090</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-flexura-3_9b37ec7f-0cbd-4ac6-8660-31eae1157415.jpg?v=1765345090</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-flexura-2_6d32fe56-0a94-40bc-bfe4-4b4267005e24.jpg?v=1765345090</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-flexura-5_62921c5b-cd10-469f-aea6-a6167cd181b8.jpg?v=1765345090</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-flexura-6_b76ddcce-bd76-4e6b-bed9-53e9963e5aeb.jpg?v=1765345090</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>1139.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446694</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KE00001</sku>
+        <name>Kiperin Elixea ‘Longevity&apos; | Resveratrol, Glutatyon, Koenzim Q10, NMN, NADH, PQQ..| 60 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-elixia-premium</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/elixea-hb_1c316ffe-b2e3-4292-89e3-dd6373d572dc.jpg?v=1765345119</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/3_0a6155f9-aba3-42d7-97a5-2d3cc45f551c.jpg?v=1765345119</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/2_bd32c039-28f2-4b2a-9fa8-f454b4eda73b.jpg?v=1765345119</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/5_54fe63de-cd10-4bb4-a0ff-ed32d7b7745c.jpg?v=1765345119</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/6_f54b0de0-374a-4a62-9757-bf01e272559e.jpg?v=1765345119</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>2249.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8685035174005</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KKF00001</sku>
+        <name>Kids Fish Oil | Çocuk Özel | Yüksek Balık Yağı: 1800, Omega 3:1206mg, EPA:180mg, DHA:900mg | 150ml</name>
+        <url>https://kiperinturkiye.com/products/kiperin-kids-fish-oil</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/fishoil.jpg?v=1765345441</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/fishoil_hb.png?v=1765345441</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-omega3-2.jpg?v=1765345441</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-omega3-6.jpg?v=1765345441</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-omega3-7.jpg?v=1765345441</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>1089.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446618</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KD300001</sku>
+        <name>D3K2 | Vitamin D3 (1000 IU) &amp; K2 (25mcg) | Kaliteli İçerik | Pureness For Health İlkesi | 365 Damla</name>
+        <url>https://kiperinturkiye.com/products/kiperin-d3k2</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/d3k2-hb_35637ddc-b86b-4024-9e4d-4bee8ecf964e.jpg?v=1765345494</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/d3k2-hb.png?v=1765345494</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/kiperin-D3-vitamini-k2vitamini-2.jpg?v=1765345494</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/kiperin-D3-vitamini-k2vitamini-6.jpg?v=1765345494</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/kiperin-D3-vitamini-k2vitamini-7.jpg?v=1765345494</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>369.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446663</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KLI00001</sku>
+        <name>Kiperin Lugol İyot | %3 İyot &amp; %6 Potasyum İyodür | Kaliteli İçerik | Pureness For Health İlkesi | 365 Damla</name>
+        <url>https://kiperinturkiye.com/products/kiperin-lugol-iyot</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/iyot-hb_a7e1e7ab-787e-4d0c-a933-acdc146cad79.jpg?v=1765344662</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/iyot_hb.png?v=1765344662</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-Lugol-iyot-2.jpg?v=1765344662</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-Lugol-iyot-6.jpg?v=1765344662</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Kiperin-Lugol-iyot-7.jpg?v=1765344662</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>199.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446670</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KDK00001</sku>
+        <name>Kiperin Lipozomal D3 K2 Vitaminleri (MK4 ve MK7) &amp; Çok Yüksek Biyoaktif (365 Günlük)</name>
+        <url>https://kiperinturkiye.com/products/kiperin-lipozomal-d3k2</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/L_d3k2-hb_d6efe552-b724-4195-975f-dff45c8c4224.jpg?v=1765345545</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/lipo-d3k2-hb.png?v=1765345545</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Lipozomal-d3k2-2.jpg?v=1765345545</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Lipozomal-d3k2-6.jpg?v=1765345545</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Lipozomal-d3k2-7.png?v=1765345545</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>579.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8682304243578</barcode>
+        <campaignCode>3AL-2ODE</campaignCode>
+    </product>
+
+    <product>
+        <sku>KCA00001</sku>
+        <name>Kiperin Calm Passiflora, Safran, 5-HTP, Valerian, ... 9 İçerik (30 Günlük).</name>
+        <url>https://kiperinturkiye.com/products/kiperin-calm</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/calm-hb_80520e58-0b01-4973-915c-726224e55cbf.jpg?v=1765345631</imgUrl>
+        <additionalimages>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/calm_hb.png?v=1765345631</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/calm-relax-2.jpg?v=1765345631</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/calm-relax-6.jpg?v=1765345631</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/calm-relax-7.jpg?v=1765345631</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
+        </additionalimages>
+        <distributor>true</distributor>
+        <price>719.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
+        <expressDeliveryTime>17</expressDeliveryTime>
+        <productBrand>Kiperin Türkiye</productBrand>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8684898446601</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
         <sku>KMF00001</sku>
-        <name>Mind Focus Aslan Yelesi Mantarı, Sitikolin, Rhodiola, L-Theanin .. (1440mg) | Akıllı Gıda Takviyesi</name>
+        <name>Kiperin Mind Focus Aslan Yelesi Mantarı, Sitikolin, Rhodiola, L-Theanin (1440mg)</name>
         <url>https://kiperinturkiye.com/products/kiperin-mind-focus</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/mindfocus.png?v=1758022872</imgUrl>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/mindfocus-hb_6cabbca5-e36a-4cbe-85ea-6eab77c85a8a.jpg?v=1765345701</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-2.jpg?v=1758183845</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-3.jpg?v=1758183845</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-4.jpg?v=1758183845</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-5.jpg?v=1758183845</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-6.jpg?v=1758183845</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Mind_Focus-8.jpg?v=1758183845</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/mindfocus_hb.png?v=1765345701</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-Mind_Focus-2.jpg?v=1765345701</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-Mind_Focus-6.jpg?v=1765345701</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Tr-Dogallik-Orani_2.jpg?v=1765345701</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Mind Focus, Aslan Yelesi Mantarı, Sitikolin, Kafein, Fosfotidilserin, Ginko Bilaba, Rhodiola ve L-Theanin içeren bir Akıllı Gıda Takviyesidir. Bu özel formül, zihinsel fonksiyonları desteklemek ve günlük yaşamın yoğun temposunda daha verimli olmanıza yardımcı olmak için tasarlanmıştır. Kiperin Mind Focus, hafıza, odaklanma ve bilişsel performansı artırmak için tasarlanmış bir gıda takviyesidir. Formülasyonunda Aslan Yelesi Mantarı, Sitikolin, Rhodiola ve L-Theanin gibi etkili bileşenler bulunur. Bu ürün, zihinsel netliği artırırken konsantrasyon arttırıcı takviye olarak da öne çıkar. Yoğun bir çalışma temposuna sahip kişiler için Kiperin Mind Focus Akıllı Gıda Takviyesi, hem zihinsel performansı hem de hafıza gelişimini destekleyen bir konsantrasyon arttırıcı takviye olarak tercih edilmektedir.]]></description>
         <distributor>true</distributor>
-        <price>2149.00</price>
-        <shipPrice>1679.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>1679.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
         <barcode>8682304243523</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
         <sku>KPB00001</sku>
-        <name>Postbiyotik 210 Milyar Cfu Rhamnosus Plantarum Sindirim(21Kapsül 700mg) | Akıllı Gıda Takviyesi</name>
+        <name>Kiperin Postbiyotik 210 Milyar Cfu Rhamnosus &amp; Plantarum (21Kapsül &amp; 700mg)</name>
         <url>https://kiperinturkiye.com/products/kiperin-postbiyotik</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-1.jpg?v=1758630816</imgUrl>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/postbiyotik-hb_4d8ebd02-1b97-48f9-94ca-e52bf4d8e1a6.jpg?v=1765345737</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-2.jpg?v=1758630816</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-3.jpg?v=1758630816</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-4.jpg?v=1758630817</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-5.jpg?v=1758630817</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-6.jpg?v=1758630817</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-7.jpg?v=1758630816</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/postbiyotik-8.jpg?v=1758630817</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/postbiyotik_hb.png?v=1765345737</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/postbiyotik-2.jpg?v=1765345737</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/postbiyotik-6.jpg?v=1765345737</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/postbiyotik-7.jpg?v=1765345737</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Postbiyotik, Lactobacillus Plantarum ve Lactobacillus Rhamnosus bakterilerinin inaktive edilmiş halleri ile zenginleştirilmiş özel bir Akıllı Gıda Takviyesidir. Postbiyotikler, bağırsak mikrobiyotasının dengelenmesine katkıda bulunur. Bu katkı, sindirim sisteminin normal işleyişinin desteklenmesine yardımcı olur. Ayrıca bağışıklık sisteminin normal fonksiyonuna katkıda bulunur. Günlük yaşamda dengesiz beslenme, stres ve çevresel faktörler bağırsak mikrobiyotasını etkileyebilir. Düzenli kullanımında postbiyotikler, bağırsak mikrobiyotasının korunmasına destek olur ve böylece sindirim sistemi ile bağışıklık fonksiyonlarının normal işleyişine katkıda bulunur. Canlı probiyotiklerden farklı olarak, inaktive edilmiş formları sayesinde daha stabil ve çevresel koşullara karşı daha dayanıklıdır. Yüksek biyoyararlanımı sayesinde vücutta kolayca emilir ve bağırsak mikrobiyotasının normal dengesine katkıda bulunur.]]></description>
         <distributor>true</distributor>
-        <price>1009.00</price>
-        <shipPrice>719.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>819.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Probiyotik</productCategory>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
         <barcode>8682304243547</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KBP00001</sku>
-        <name>Bromelain(2500 Gdu) Papain - Doğal Proteolitik Enzim (30Kapsül 700mg) | Akıllı Gıda Takviyesi</name>
-        <url>https://kiperinturkiye.com/products/kiperin-bromelain-papain-takviyesi</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/bromelain.png?v=1758022960</imgUrl>
-        <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-2.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-3.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-4.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-5.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-6.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-7.jpg?v=1758184909</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-Bromelain-8.jpg?v=1758184909</imgUrl>
-        </additionalimages>
-        <description><![CDATA[Kiperin Bromelain & Papain, 2500 GDU 500 mg Bromelain ve 200 mg Papain içeren özel bir enzim kombinasyonudur. Bromelain ve Papain, proteinlerin parçalanmasına katkıda bulunan doğal enzimlerdir. Bu özel formül, besinlerden alınan proteinlerin sindirim sürecinde daha verimli kullanılmasına yardımcı olur. Kiperin Bromelain & Papain, sindirim sisteminin normal fonksiyonlarının desteklenmesine katkıda bulunur. Günlük yaşamın temposunda dengeli beslenmeye destek sağlayan pratik bir takviyedir.]]></description>
-        <distributor>true</distributor>
-        <price>699.00</price>
-        <shipPrice>539.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
-        <expressDeliveryTime>17</expressDeliveryTime>
-        <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8682304243554</barcode>
-        <campaignCode>3AL-2ODE</campaignCode>
-    </product>
-
-    <product>
         <sku>KCD00001</sku>
-        <name>Cranberry, D-Mannoz, C Vitamin - İdrar Yolu Sağlığı (60Kapsül 1400mg) | Akıllı Gıda Takviyesi</name>
+        <name>Kiperin Cranberry, D-Mannoz, C Vitamin (60Kapsül &amp; 1400mg)</name>
         <url>https://kiperinturkiye.com/products/kiperin-cranberry-takviyesi</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry-son-hb.jpg?v=1758893177</imgUrl>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/cranberry-hb_d234a674-9c5e-4b2e-9667-ecf2de2a02c8.jpg?v=1765345774</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_2_dcff9fbc-b71f-446d-bd4c-59c4244da4ef.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranbery-3---hb.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_4.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_5.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_6.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_7.jpg?v=1758893177</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/cranberry_8.jpg?v=1758893177</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/cranbery_hb.png?v=1765345774</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/cranberry_2_dcff9fbc-b71f-446d-bd4c-59c4244da4ef.jpg?v=1765345774</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/cranberry_6.jpg?v=1765345774</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/cranberry_7.jpg?v=1765345774</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Cranberry + D-Mannose, C Vitamini içeren özel formülüyle idrar yollarının normal fonksiyonlarını desteklemeye yardımcı olan bir gıda takviyesidir. İçeriğinde bulunan C vitamini, bağışıklık sisteminin normal fonksiyonuna katkıda bulunur ve hücreleri oksidatif strese karşı korumaya yardımcı olur. Cranberry ve D-Mannose’un birlikte kullanımı, idrar yollarının sağlıklı kalmasına destek olur ve vücudun doğal savunma mekanizmalarını tamamlayıcı bir rol oynar. Düzenli kullanımda, idrar yollarının sağlıklı işleyişine katkı sağlayabilir.]]></description>
         <distributor>true</distributor>
-        <price>839.00</price>
-        <shipPrice>689.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>749.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
         <barcode>8682304243585</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KCA00001</sku>
-        <name>Calm 'Relax' Passiflora, Safran, 5-HTP, Valerian, ... 9 İçerik (30 Günlük) | Akıllı Gıda Takviyesi</name>
-        <url>https://kiperinturkiye.com/products/kiperin-calm</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-1.jpg?v=1758263307</imgUrl>
+        <sku>KBP00001</sku>
+        <name>Kiperin Bromelain(2500 Gdu) &amp; Papain - Doğal Proteolitik Enzim (30Kapsül &amp; 700mg)</name>
+        <url>https://kiperinturkiye.com/products/kiperin-bromelain-papain-takviyesi</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/bromelain-hb_42a34457-2b21-4c70-a199-17547d94ffd4.jpg?v=1765345805</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-2.jpg?v=1758263308</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-3.jpg?v=1758263307</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-4.jpg?v=1758263307</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-5.jpg?v=1758263307</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-6.jpg?v=1758263307</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-7.jpg?v=1758263307</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/calm-relax-8.jpg?v=1758263307</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/bromelain_hb.png?v=1765345805</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-Bromelain-2.jpg?v=1765345805</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-Bromelain-6.jpg?v=1765345805</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-Bromelain-7.jpg?v=1765345805</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Calm, Passiflora, Valerian, Mayıs Papatyası, 5-HTP, Safran, L-Triptofan, Şerbetçi Otu Ekstresi, B6 Vitamini ve Melisa Ekstresi içeren özel bir Akıllı Gıda Takviyesidir. Bu özel formül, sinir sisteminin normal işleyişine katkıda bulunur. İçeriğindeki B6 vitamini, normal psikolojik fonksiyonların sürdürülmesine destek olur. Günlük yaşam temposunda sakinlik ve denge hissini destekleyici bir takviye olarak öne çıkar. Kiperin Calm, bitkisel ekstreler ve vitaminlerle zenginleştirilmiş olup, zihinsel rahatlamaya destek olmak amacıyla formüle edilmiştir. İçeriğindeki L-Triptophan ve 5-HTP, protein sentezinde rol alır ve sinir sisteminin normal fonksiyonlarının desteklenmesine katkı sağlar. Yoğun iş temposu ve günlük stres yaşayan kişiler için, duygusal dengeyi korumaya yardımcı olacak şekilde tasarlanmıştır.]]></description>
         <distributor>true</distributor>
-        <price>729.00</price>
-        <shipPrice>609.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>629.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8684898446601</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8682304243554</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KDK00001</sku>
-        <name>Lipozomal D3 K2 Vitaminleri (MK4 ve MK7) Çok Yüksek Biyoaktif (365 Günlük) | Akıllı Gıda Takviyesi</name>
-        <url>https://kiperinturkiye.com/products/kiperin-lipozomal-d3k2</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-1.jpg?v=1758631164</imgUrl>
+        <sku>KMV00001</sku>
+        <name>Kiperin Lipozomal Multivitamin Takviyesi: 13 Vitamin &amp; 6 Mineral</name>
+        <url>https://kiperinturkiye.com/products/kiperin-multivitamin-takviyesi</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/lipozomal-multivitamin-hb_5deaac29-5137-43a9-bc81-168a4e52f6f7.jpg?v=1765345835</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-2.jpg?v=1758631164</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-3.jpg?v=1758631164</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-4.jpg?v=1758631164</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-5.jpg?v=1758631164</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-6.jpg?v=1758631164</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-7.png?v=1758631165</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Lipozomal-d3k2-8.jpg?v=1758631164</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/multivitamin_hb.png?v=1765345835</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Multivitamin-2.jpg?v=1765345835</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Multivitamin-6.jpg?v=1765345835</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Lipozomal D3K2, lipozomal teknoloji ile formüle edilmiş, D3 vitamini ile birlikte K2 vitamininin MK-4 ve MK-7 formlarını içeren özel bir akıllı gıda takviyesidir. D3 vitamini, normal kemiklerin ve kas fonksiyonlarının korunmasına katkıda bulunur. K2 vitamini ise normal kan pıhtılaşma işlevinin sürdürülmesine destek sağlar. Lipozomal teknoloji, içeriklerin stabilitesinin korunmasına yardımcı olur ve vitaminlerin biyoyararlanımını destekler. D3 ve K2’nin birlikte kullanımı, günlük yaşamda vitamin desteğini pratik ve güvenilir bir şekilde sunar.]]></description>
         <distributor>true</distributor>
-        <price>599.00</price>
-        <shipPrice>489.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>789.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8682304243578</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8682304243530</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KLI00001</sku>
-        <name>Lugol İyot | %3 İyot 6 Potasyum İyodür | Kaliteli İçerik | Pureness For Health İlkesi | 365 Damla</name>
-        <url>https://kiperinturkiye.com/products/kiperin-lugol-iyot</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-iyot.jpg?v=1758200429</imgUrl>
+        <sku>KMM00001</sku>
+        <name>Kiperin 5x Çoklu Magnezyum (Taurat, Bisglisinat, Malat, Sitrat, L-Treonat) 60 Kapsül</name>
+        <url>https://kiperinturkiye.com/products/kiperin-magnezyum-takviyesi</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/magnezyum.jpg?v=1765345870</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-2.jpg?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-3.jpg?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-4.png?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-5.png?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-6.jpg?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-7.jpg?v=1758200429</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-Lugol-iyot-8.jpg?v=1758200429</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/magnezyum_hb.png?v=1765345870</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Magnezyum2.jpg?v=1765345870</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Magnezyum6.jpg?v=1765345870</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Magnezyum7.jpg?v=1765345870</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Lugol İyot, potasyum iyodür (KI) formunda iyot içeren özel bir gıda takviyesidir. Bu formül, günlük kullanım için uygun şekilde hazırlanmış damla tipi bir iyot çözeltisidir. İçeriğindeki iyot, tiroid hormonlarının üretimi için gerekli bir mineral olarak vücutta önemli bir rol oynar. Bu özel formül, iyotun stabilitesinin korunmasına ve vücut tarafından kullanılmasına uygun olarak tasarlanmıştır.]]></description>
         <distributor>true</distributor>
-        <price>199.00</price>
-        <shipPrice>149.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>649.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8684898446670</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Vitamin ve Mineral</productCategory>
+        <barcode>8682304243561</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KD300001</sku>
-        <name>D3K2 | Vitamin D3 (1000 IU) K2 (25mcg) | Kaliteli İçerik | Pureness For Health İlkesi | 365 Damla </name>
-        <url>https://kiperinturkiye.com/products/kiperin-d3k2</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-d3k2-kiperin.jpg?v=1758283428</imgUrl>
+        <sku>KPC00001</sku>
+        <name>Kiperin Purple Collagen (576gr) %100 Saf ve Doğal Mor &amp; Çoklu Kolajen Peptitleri içeren Lipozomal Teknoloji Takviye Edici Gıda</name>
+        <url>https://kiperinturkiye.com/products/kiperin-purple-collagen</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/purple.jpg?v=1765345900</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-2.jpg?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-3.jpg?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-4.png?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-5.jpg?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-6.jpg?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-7.jpg?v=1758283428</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/kiperin-D3-vitamini-k2vitamini-8.jpg?v=1758283428</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Mor-kolajen-site-3_203ba003-d485-4698-b8e8-ff55bdef140a.jpg?v=1765345900</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Mor-kolajen-site-2_2d2c41d1-5daa-4158-9cb9-a1886e3998e0.jpg?v=1765345900</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Mor-kolajen-site-6_f6d6f82f-649f-4be4-a581-7f6bfa13595b.jpg?v=1765345900</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/Mor-kolajen-site-7_12dab040-27bd-464f-8472-5703146d17dd.jpg?v=1765345900</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin D3K2, D3 vitamini ve K2 vitamini’nin belirli formlarını içeren özel bir gıda takviyesidir.Bu kombinasyon, iki vitaminin dengeli biçimde birleştirildiği bir form olarak hazırlanmıştır.D3 vitamini, normal kemiklerin korunmasına, normal kas fonksiyonunun sürdürülmesine ve normal bağışıklık sistemine katkıda bulunurken; K2 vitamini, normal kan pıhtılaşma işlevine destek sağlar.Bu formül, günlük kullanıma uygun şekilde geliştirilmiştir ve içerdiği vitaminlerin stabilitesini koruyacak şekilde formüle edilmiştir.]]></description>
         <distributor>true</distributor>
-        <price>419.00</price>
-        <shipPrice>329.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>1629.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Vitamin ve Mineral</productCategory>
-        <barcode>8684898446663</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Kolajen</productCategory>
+        <barcode>8682304243516</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
     <product>
-        <sku>KKF00001</sku>
-        <name>Kids Fish Oil | Çocuk Özel | Yüksek Balık Yağı: 1800, Omega 3:1206mg, EPA:180mg,
-            DHA:900mg | 150ml</name>
-        <url>https://kiperinturkiye.com/products/kiperin-kids-fish-oil</url>
-        <imgUrl>https://kiperinturkiye.com/cdn/shop/files/site-_Omega.jpg</imgUrl>
+        <sku>KC00001</sku>
+        <name>Kiperin Collagen Classic (500gr) %100 Saf ve Doğal Yüksek Biyoaktif Çift Hidrolize Kolajen Peptitleri içeren Takviye Edici Gıda</name>
+        <url>https://kiperinturkiye.com/products/kiperin-classic-collagen</url>
+        <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/klasik-hb.jpg?v=1765346904</imgUrl>
         <additionalimages>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-2.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-3.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-4.png</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-5.png</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-6.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Kiperin-omega3-7.jpg</imgUrl>
-            <imgUrl>https://kiperinturkiye.com/cdn/shop/files/Hb-sertifika.jpg</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-kolajen-3_25d64bf2-766f-4a8c-9855-650ce0296718.jpg?v=1765346904</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-kolajen-2_d2902971-5bd7-49d5-b477-2a998e410029.jpg?v=1765346904</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-kolajen-6_c8a544e7-0854-4a88-a7f0-e335fe0b012e.jpg?v=1765346904</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/site-kolajen-7_53ce0555-8ffd-4a25-84b2-1e6c27e92399.jpg?v=1765346904</imgUrl>
+            <imgUrl>https://cdn.shopify.com/s/files/1/0586/1910/1363/files/hb-sertifika_5dac8a28-6ebf-4fe5-a994-8895f5eab3fc.jpg?v=1765346904</imgUrl>
         </additionalimages>
-        <description><![CDATA[Kiperin Kids Fish Oil, çocukların günlük beslenmesine destek olmak amacıyla özel olarak geliştirilmiş, yüksek kaliteli balık yağı içeren bir gıda takviyesidir. Formülünde Omega-3 yağ asitlerinden EPA (Eikosapentaenoik Asit) ve DHA (Dokosahekzaenoik Asit) bulunur. DHA, beyin fonksiyonlarının normal gelişimine ve görme yetisinin korunmasına katkıda bulunur. EPA ve DHA birlikte alındığında ise kalbin normal fonksiyonuna katkıda bulunur. Ayrıca içeriğinde bulunan A vitamini, normal görme yetisinin korunmasına, bağışıklık sisteminin normal fonksiyonuna ve cildin normal durumunun korunmasına destek olur. Çocuklara özel formülü sayesinde, büyüme ve gelişim döneminde ihtiyaç duyulan Omega-3 yağ asitlerini ve A vitaminini pratik bir şekilde sunar. Sıvı formu ile kolayca kullanılabilir ve günlük beslenmenin yanında güvenle tercih edilebilecek bir takviye olarak hazırlanmıştır.]]></description>
         <distributor>true</distributor>
-        <price>1239.00</price>
-        <shipPrice>989.00</shipPrice>
-        <dayOfDelivery>0</dayOfDelivery>
+        <price>1236.00</price>
+        <shipPrice>0.00</shipPrice>
+        <dayOfDelivery>2</dayOfDelivery>
         <expressDeliveryTime>17</expressDeliveryTime>
         <productBrand>Kiperin Türkiye</productBrand>
-        <productCategory>Kozmetik, Kişisel Bakım > Sağlık Ürünleri > Besin Takviyesi > Balık Yağı</productCategory>
-        <barcode>8684898446618</barcode>
+        <productCategory>Kozmetik, Kişisel Bakım &gt; Sağlık Ürünleri &gt; Besin Takviyesi &gt; Kolajen</productCategory>
+        <barcode>8682304243509</barcode>
         <campaignCode>3AL-2ODE</campaignCode>
     </product>
 
